@@ -1,5 +1,5 @@
-CFLAGS= -D__LINUX__ -c -Wall -O2
-LIBS = -lm -lpthread -lgpiod
+CFLAGS= -g -D__LINUX__ -c -Wall -O2
+LIBS = -g -lm -lpthread -lgpiod
 
 all: bb_ir
 

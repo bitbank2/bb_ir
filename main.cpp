@@ -57,9 +57,9 @@
 static char szChipName[16];
 struct gpiod_chip *chip = NULL;
 #ifdef GPIOD_API
-struct gpiod_line *lines[64];
+struct gpiod_line *lines[512];
 #else
-struct gpiod_line_request *lines[64];
+struct gpiod_line_request *lines[512];
 #endif
 
 
@@ -70,6 +70,8 @@ struct gpiod_line_request *lines[64];
 // a good choice. On the Zero 2W, all GPIO pins are connected to "Chip 0"
 //
 #define IR_PIN 17
+// On the OrangePi Zero 2W, physical pin 11 is GPIO 226
+//#define IR_PIN 226
 #define CHIP_NUM 0
 
 //
